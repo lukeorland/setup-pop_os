@@ -56,6 +56,7 @@
       - midori
       - fonts-powerline
       - kazam
+      - slack
       - xl2tpd
     state: absent
 

@@ -52,4 +52,5 @@
     name:
       - auto-cpufreq
       - codium
+      - slack
     state: absent
