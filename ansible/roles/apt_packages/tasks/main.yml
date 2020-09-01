@@ -19,6 +19,7 @@
     - tlp
     - network-manager-l2tp
     - network-manager-l2tp-gnome
+    - silversearcher-ag
     # For pyenv:
     - build-essential
     - libssl-dev
