@@ -9,10 +9,11 @@
     new_hostname: devxps
     # gist_file: '{{ playbook_dir.split("/")[0:-1]|join("/") }}/18dafb104e93c9a2362ffe85c0dfd02e/dconf-settings.dconf'
     gnome_extension_ids:
-      # - 1160	# Dash2Panel
-      # - 1251  # blyr
-      # - 2660  # transparent panel
-      # - 351	  # Icon Hider
+      # 1160	# Dash2Panel
+      # 1251  # blyr
+      # 2660  # transparent panel
+      # 351	  # Icon Hider
+      - 131   # touchpad-indicator
       - 277	  # impatience
       - 302   # windowoverlay-icons
       - 517   # caffeine
@@ -28,7 +29,7 @@
     - {role: markosamuli.pyenv}
     # - {role: dropbox, tags: 'dropbox'}
     # - {role: cryptomator, tags: 'crp'}
-    # - {role: jaredhocutt.gnome_extensions, tags: 'gext'}
+    - {role: jaredhocutt.gnome_extensions, tags: 'gext'}
     - {role: fira_code}
     - {role: alacritty_config, tags: 'alacritty'}
     - {role: oh_my_zsh}
