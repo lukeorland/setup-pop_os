@@ -15,6 +15,7 @@
     # - { name: 'Remmina', url: 'https://flathub.org/repo/appstream/org.remmina.Remmina.flatpakref' }
     # - { name: 'Flowblade', url: 'https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref' }
     - { name: 'Zeal', url: org.zealdocs.Zeal }
+    - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop }
 
 - name: remove several flatpak items
   flatpak:
