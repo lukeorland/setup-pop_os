@@ -33,6 +33,7 @@
     - {role: fira_code}
     - {role: alacritty_config, tags: 'alacritty'}
     - {role: oh_my_zsh}
+    - {role: switch_pro_controller, tags: 'nintendo'}
 
   tasks:
   - name: Ensure group "docker" exists
