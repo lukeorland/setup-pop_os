@@ -19,14 +19,46 @@
     - tlp
     - network-manager-l2tp
     - network-manager-l2tp-gnome
+    # For pyenv:
+    - build-essential
+    - libssl-dev
+    - zlib1g-dev
+    - libbz2-dev
+    - libreadline-dev
+    - libsqlite3-dev
+    - wget
+    - curl
+    - llvm
+    - libncurses5-dev
+    - libncursesw5-dev
+    - xz-utils
+    - tk-dev
+    - libffi-dev
+    - liblzma-dev
+    - python-openssl
+    - git
+
+- name: Build deps
+  become: yes
+  apt:
+    pkg:
+      - python3
+    state: build-dep
 
 - name: Remove apt packages
   become: yes
   apt:
-    name: ['falkon', 'kdeconnect', 'midori', 'fonts-powerline', 'kazam', 'xl2tpd']
+    name:
+      - code
+      - falkon
+      - kdeconnect
+      - midori
+      - fonts-powerline
+      - kazam
+      - xl2tpd
     state: absent
 
-- name: Remove dependencies that are no longer required
-  become: yes
-  apt:
-    autoremove: yes
+# - name: Remove dependencies that are no longer required
+#   become: yes
+#   apt:
+#     autoremove: yes

@@ -7,25 +7,33 @@
     local_home: "{{ lookup('env','HOME') }}"
     region_loc: "nl_NL.UTF-8"
     new_hostname: devxps
-    gist_file: '{{ playbook_dir.split("/")[0:-1]|join("/") }}/18dafb104e93c9a2362ffe85c0dfd02e/dconf-settings.dconf'
+    # gist_file: '{{ playbook_dir.split("/")[0:-1]|join("/") }}/18dafb104e93c9a2362ffe85c0dfd02e/dconf-settings.dconf'
     gnome_extension_ids:
-      - 1160	# Dash2Panel
+      # - 1160	# Dash2Panel
+      # - 1251  # blyr
+      # - 2660  # transparent panel
+      # - 351	  # Icon Hider
       - 277	  # impatience
-      - 906	  # sound input and output device chooser
-      - 351	  # Icon Hider
-      - 1251  # blyr
-      - 2660  # transparent panel
+      - 302   # windowoverlay-icons
+      - 517   # caffeine
+      - 779   # clipboard indicator
       - 800   # remove dropdown arrows
-  
+      - 906	  # sound input and output device chooser
+
   roles:
+
       #- {role: powerlinefonts, tags: 'font'}
-    - {role: gui_apps, tags: 'app'}
     - {role: apt_packages, tags: 'apt'}
-    - {role: dropbox, tags: 'dropbox'}
-    - {role: cryptomator, tags: 'crp'}
-    - {role: jaredhocutt.gnome_extensions, tags: 'gext'}
-   
-  tasks:      
+    - {role: gui_apps, tags: 'app'}
+    - {role: markosamuli.pyenv}
+    # - {role: dropbox, tags: 'dropbox'}
+    # - {role: cryptomator, tags: 'crp'}
+    # - {role: jaredhocutt.gnome_extensions, tags: 'gext'}
+    - {role: fira_code}
+    - {role: alacritty_config, tags: 'alacritty'}
+    - {role: oh_my_zsh}
+
+  tasks:
   - name: Ensure group "docker" exists
     become: yes
     group:
@@ -60,7 +68,7 @@
       - "{{ local_home }}/.local/bin"
       - "{{ local_home }}/go"
 
-  - name: Make sudo docker paswordless
+  - name: Make sudo docker passwordless
     become: yes
     lineinfile:
       path: /etc/sudoers.d/docker
@@ -69,49 +77,40 @@
       owner: root
       mode: '0440'
 
-  - name: Test if oh-my-zsh is present.
-    stat:
-      path: "{{ local_home }}/.oh-my-zsh"
-    register: ohmyzsh
+  # - name: Clone dotfiles
+  #   git:
+  #     repo: "https://github.com/kevinjelnl/dotfiles.git"
+  #     dest: "{{ local_home }}/dotfiles"
+  #     update: no
 
-  - name: Install "oh-my-zsh"
-    shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    when: not ohmyzsh.stat.exists
-  
-  - name: Clone dotfiles
-    git:
-      repo: "https://github.com/kevinjelnl/dotfiles.git"
-      dest: "{{ local_home }}/dotfiles"
-      update: no
-      
-  - name: Set dotfiles
-    shell: ./install
-    args:
-      chdir: "{{ local_home }}/dotfiles"
+  # - name: Set dotfiles
+  #   shell: ./install
+  #   args:
+  #     chdir: "{{ local_home }}/dotfiles"
 
 # # change the remote of the repo to SSH
 # git remote set-url origin git@github.com:kevinjelnl/dotfiles.git
 
-      
+
   - name: Ensure a locale exists
     become: yes
     locale_gen:
       name: "{{ region_loc }}"
       state: present
 
-  - name: Test if submodule with gist is present
-    stat:
-      path: "{{ gist_file }}"
-    register: dconfisthere
+  # - name: Test if submodule with gist is present
+  #   stat:
+  #     path: "{{ gist_file }}"
+  #   register: dconfisthere
 
-  - name: load DCONF settings
-    shell: "dconf load '/' < '{{ gist_file }}'"
-    when: dconfisthere.stat.exists
-  
-  - name: Set multiple crons
-    cron:
-      name: "{{ item.name }}"
-      special_time: "{{ item.time }}"
-      job: "{{ item.job }}"
-    loop:
-      - { name: "dump dconf", time: "weekly", job: "/usr/bin/dconf dump / > {{ gist_file }}" }
+  # - name: load DCONF settings
+  #   shell: "dconf load '/' < '{{ gist_file }}'"
+  #   when: dconfisthere.stat.exists
+
+  # - name: Set multiple crons
+  #   cron:
+  #     name: "{{ item.name }}"
+  #     special_time: "{{ item.time }}"
+  #     job: "{{ item.job }}"
+  #   loop:
+  #     - { name: "dump dconf", time: "weekly", job: "/usr/bin/dconf dump / > {{ gist_file }}" }

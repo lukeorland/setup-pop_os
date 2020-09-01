@@ -1,0 +1,31 @@
+---
+
+- name: make font directory
+  become: yes
+  file:
+    path: /usr/local/share/fonts
+    state: directory
+
+- name: make fira directory
+  become: yes
+  file:
+    path: /usr/local/share/fonts/fira
+    state: directory
+
+- name: downloads Firacode
+  become: yes
+  unarchive:
+    src: https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip
+    dest: /usr/local/share/fonts/fira
+    remote_src: yes
+    creates: /usr/local/share/fonts/fira/specimen.html
+
+# - name: make sure FiraCode is seen as monospace
+#   copy:
+#     dest: "{{ansible_user_dir}}/.fonts/fontconfig/conf.f/8-firacodespacing.conf"
+#     src: ../files/8-firacodespacing.conf
+#     backup: yes
+
+- name: update fc cache
+  become: yes
+  command: fc-cache -f -v
