@@ -1,0 +1,16 @@
+---
+
+- name: Install emacs flatpak
+  flatpak:
+    name: emacs
+    state: present
+    method: user
+
+- name: doom
+  shell:
+  args:
+    cmd: |
+      git clone --depth 1 https://github.com/hlissner/doom-emacs {{ local_home }}/.emacs.d
+
+      yes | EMACS="/usr/bin/flatpak run org.gnu.emacs" {{ local_home }}/.emacs.d/bin/doom install
+    creates: "{{ local_home }}/.emacs.d/bin/doom"
