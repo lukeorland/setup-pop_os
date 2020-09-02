@@ -14,3 +14,18 @@
 
       yes | EMACS="/usr/bin/flatpak run org.gnu.emacs" {{ local_home }}/.emacs.d/bin/doom install
     creates: "{{ local_home }}/.emacs.d/bin/doom"
+
+
+- name: emacs alias
+  become: no
+  lineinfile:
+    path: "{{ local_home }}/.zshrc"
+    line: 'export EMACS="/usr/bin/flatpak run org.gnu.emacs"'
+    create: no
+
+- name: doom scripts on PATH
+  become: no
+  lineinfile:
+    path: "{{ local_home }}/.zshrc"
+    line: "export PATH={{ local_home }}/.emacs.d/bin:$PATH"
+    create: no
