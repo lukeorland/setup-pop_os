@@ -8,6 +8,7 @@
     - bat
     - fzf
     - gnome-shell-pomodoro  # https://community.spotify.com/t5/Desktop-Linux/Basic-controls-via-command-line/td-p/4295625
+    - graphviz
     - htop
     - thefuck
     - neovim
