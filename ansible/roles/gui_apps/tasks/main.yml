@@ -16,6 +16,7 @@
     # - { name: 'Flowblade', url: 'https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref' }
     - { name: 'Zeal', url: org.zealdocs.Zeal }
     - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop }
+    - { name: 'Calibre', url: com.calibre_ebook.calibre }
 
 - name: remove several flatpak items
   flatpak:
@@ -55,3 +56,12 @@
       - codium
       - slack
     state: absent
+
+########
+# Misc #
+########
+
+- name: Tool for converting O'Reilly Learning books to Kindle
+  git:
+    repo: git@github.com:lorenzodifuccia/safaribooks.git
+    dest: "{{ local_home }}/src/lorenzodifuccia__safaribooks"
