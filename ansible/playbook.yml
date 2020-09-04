@@ -9,7 +9,8 @@
     new_hostname: devxps
     # gist_file: '{{ playbook_dir.split("/")[0:-1]|join("/") }}/18dafb104e93c9a2362ffe85c0dfd02e/dconf-settings.dconf'
     gnome_extension_ids:
-      # 351	  # Icon Hider
+      - 28    # gTile, <Super><Alt>Enter
+      - 351	  # Icon Hider
       - 131   # touchpad-indicator
       - 277	  # impatience
       - 302   # windowoverlay-icons
@@ -18,7 +19,7 @@
       - 800   # remove dropdown arrows
       - 906	  # sound input and output device chooser
       # 1160  # Dash2Panel
-      - 1162  # emoji-selector
+      - 1162  # emoji-selector, <Super><Shift>2
       # 1251  # blyr
       # 2660  # transparent panel
 
