@@ -35,7 +35,7 @@
     - {role: jaredhocutt.gnome_extensions, tags: 'gext'}
     - {role: fira_code}
     - {role: alacritty_config, tags: 'alacritty'}
-    - {role: oh_my_zsh}
+    - {role: oh_my_zsh, tags: 'zsh'}
     - {role: switch_pro_controller, tags: 'nintendo'}
     - {role: awscli, tags: 'aws'}
     - {role: emacs, tags: 'emacs'}

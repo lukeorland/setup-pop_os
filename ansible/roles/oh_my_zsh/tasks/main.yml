@@ -7,3 +7,15 @@
 - name: Install "oh-my-zsh"
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   when: not ohmyzsh.stat.exists
+
+- name: spaceship prompt clone
+  git:
+    repo: https://github.com/denysdovhan/spaceship-prompt.git
+    dest: "{{ local_home }}/.oh-my-zsh/custom/themes/spaceship-prompt"
+    depth: 1
+
+- name: Symlink spaceship.zsh-theme to your oh-my-zsh custom themes directory
+  file:
+    src: "{{ local_home }}/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme"
+    dest: "{{ local_home }}/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+    state: link
