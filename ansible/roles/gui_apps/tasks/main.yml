@@ -13,6 +13,7 @@
     - { name: 'DBeaver', url: 'https://flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref' }
     # - { name: 'Flowblade', url: 'https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref' }
     - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop }
+    - { name: 'PulseAudio Volume Control', url: org.pulseaudio.pavucontrol }
     # - { name: 'Remmina', url: 'https://flathub.org/repo/appstream/org.remmina.Remmina.flatpakref' }
     - { name: 'Slack', url: 'https://flathub.org/repo/appstream/com.slack.Slack.flatpakref' }
     - { name: 'Spotify', url: 'https://flathub.org/repo/appstream/com.spotify.Client.flatpakref' }
