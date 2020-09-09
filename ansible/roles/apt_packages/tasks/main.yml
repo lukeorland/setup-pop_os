@@ -4,43 +4,43 @@
   become: yes
   apt:
     pkg:
-    - alacarte
-    - snapd
-    - bat
-    - fzf
-    - gnome-shell-pomodoro  # https://community.spotify.com/t5/Desktop-Linux/Basic-controls-via-command-line/td-p/4295625
-    - graphviz
-    - htop
-    - thefuck
-    - neovim
-    - tmux
-    - tree
-    - alacritty
-    - zsh
-    - appmenu-gtk3-module
-    - gnome-tweaks
-    - tlp
-    # - network-manager-l2tp
-    # - network-manager-l2tp-gnome
-    - silversearcher-ag
-    # For pyenv:
-    - build-essential
-    - libssl-dev
-    - zlib1g-dev
-    - libbz2-dev
-    - libreadline-dev
-    - libsqlite3-dev
-    - wget
-    - curl
-    - llvm
-    - libncurses5-dev
-    - libncursesw5-dev
-    - xz-utils
-    - tk-dev
-    - libffi-dev
-    - liblzma-dev
-    - python-openssl
-    - git
+      - alacarte
+      - snapd
+      - bat
+      - fzf
+      - gnome-shell-pomodoro  # https://community.spotify.com/t5/Desktop-Linux/Basic-controls-via-command-line/td-p/4295625
+      - graphviz
+      - htop
+      - thefuck
+      - neovim
+      - tmux
+      - tree
+      - alacritty
+      - zsh
+      - appmenu-gtk3-module
+      - gnome-tweaks
+      - tlp
+      # - network-manager-l2tp
+      # - network-manager-l2tp-gnome
+      - silversearcher-ag
+      # For pyenv:
+      - build-essential
+      - libssl-dev
+      - zlib1g-dev
+      - libbz2-dev
+      - libreadline-dev
+      - libsqlite3-dev
+      - wget
+      - curl
+      - llvm
+      - libncurses5-dev
+      - libncursesw5-dev
+      - xz-utils
+      - tk-dev
+      - libffi-dev
+      - liblzma-dev
+      - python-openssl
+      - git
 
 - name: Build deps
   become: yes
