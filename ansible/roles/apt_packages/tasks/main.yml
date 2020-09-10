@@ -13,6 +13,7 @@
       - htop
       - thefuck
       - neovim
+      - pidgin  # See also: https://github.com/EionRobb/purple-hangouts
       - tmux
       - tree
       - alacritty

@@ -28,6 +28,7 @@
     method: user
   loop:
     - { name: 'Visual Studio Code - OSS', url: 'https://flathub.org/repo/appstream/com.visualstudio.code.oss.flatpakref' }
+    - { name: 'Pidgin', url: im.pidgin.Pidgin }
 
 - name: add several snap items with --classic tag
   become: yes
@@ -44,6 +45,7 @@
   snap:
     name:
       - docker
+      - yakyak
       # - p3x-redis-ui
       # - yubioath-desktop
       # - chromium
