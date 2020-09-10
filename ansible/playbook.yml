@@ -39,6 +39,7 @@
     - {role: switch_pro_controller, tags: 'nintendo'}
     - {role: awscli, tags: 'aws'}
     - {role: emacs, tags: 'emacs'}
+    - {role: workspaces, tags: 'work'}
 
   tasks:
   - name: Ensure group "docker" exists

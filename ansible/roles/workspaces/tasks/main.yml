@@ -1,0 +1,11 @@
+---
+
+# Set up code repositories
+
+- name: /opt/workspace directory
+  become: yes
+  file:
+    dest: /opt/workspace
+    state: directory
+    group: luke
+    mode: u+rwx,g+rwx,o+rx
