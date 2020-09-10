@@ -15,6 +15,7 @@
     - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop }
     - { name: 'PulseAudio Volume Control', url: org.pulseaudio.pavucontrol }
     # - { name: 'Remmina', url: 'https://flathub.org/repo/appstream/org.remmina.Remmina.flatpakref' }
+    - { name: 'Shortwave', url: de.haeckerfelix.Shortwave }
     - { name: 'Slack', url: 'https://flathub.org/repo/appstream/com.slack.Slack.flatpakref' }
     - { name: 'Spotify', url: 'https://flathub.org/repo/appstream/com.spotify.Client.flatpakref' }
     # - { name: 'Teams', url: 'https://flathub.org/repo/appstream/com.microsoft.Teams.flatpakref' }
@@ -28,6 +29,7 @@
     method: user
   loop:
     - { name: 'Visual Studio Code - OSS', url: 'https://flathub.org/repo/appstream/com.visualstudio.code.oss.flatpakref' }
+    - { name: 'Lollypop', url: org.gnome.Lollypop }
     - { name: 'Pidgin', url: im.pidgin.Pidgin }
 
 - name: add several snap items with --classic tag
