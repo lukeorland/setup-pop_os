@@ -71,4 +71,4 @@
 - name: Tool for converting O'Reilly Learning books to Kindle
   git:
     repo: git@github.com:lorenzodifuccia/safaribooks.git
-    dest: "{{ local_home }}/src/lorenzodifuccia__safaribooks"
+    dest: "/opt/src/lorenzodifuccia__safaribooks"
