@@ -57,7 +57,7 @@
     user:
        name: "{{ item }}"
        shell: /usr/bin/zsh
-       groups: adm,sudo,docker
+       groups: adm,sudo,docker,personal,luke
        append: yes
        generate_ssh_key: yes
     loop: "{{ users }}"

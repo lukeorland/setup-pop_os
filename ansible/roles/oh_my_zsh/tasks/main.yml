@@ -1,4 +1,5 @@
 ---
+
 - name: Test if oh-my-zsh is present.
   stat:
     path: "{{ local_home }}/.oh-my-zsh"
