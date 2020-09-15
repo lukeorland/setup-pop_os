@@ -43,6 +43,7 @@
     - {role: awscli, tags: 'aws'}
     - {role: emacs, tags: 'emacs'}
     - {role: workspaces, tags: 'work'}
+    - {role: keybase, tags: 'gpg'}
 
   tasks:
   - name: Ensure group "docker" exists
