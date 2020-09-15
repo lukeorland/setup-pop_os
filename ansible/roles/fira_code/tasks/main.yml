@@ -19,6 +19,7 @@
     dest: /usr/local/share/fonts/fira
     remote_src: yes
     creates: /usr/local/share/fonts/fira/specimen.html
+  register: download_result
 
 # - name: make sure FiraCode is seen as monospace
 #   copy:
@@ -29,3 +30,4 @@
 - name: update fc cache
   become: yes
   command: fc-cache -f -v
+  when: download_result.changed

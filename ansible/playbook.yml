@@ -8,6 +8,9 @@
     region_loc: "nl_NL.UTF-8"
     new_hostname: devxps
     # gist_file: '{{ playbook_dir.split("/")[0:-1]|join("/") }}/18dafb104e93c9a2362ffe85c0dfd02e/dconf-settings.dconf'
+    users:
+      - luke
+      - personal
     gnome_extension_ids:
       - 28    # gTile, <Super><Alt>Enter
       - 351	  # Icon Hider
@@ -51,19 +54,22 @@
   - name: Set user settings
     become: yes
     user:
-       name: "{{ local_user }}"
+       name: "{{ item }}"
        shell: /usr/bin/zsh
-       groups: docker
+       groups: adm,sudo,docker
        append: yes
        generate_ssh_key: yes
+    loop: "{{ users }}"
 
-  - name: set the newgroup
+  - name: reset ssh connection to allow user changes to affect 'current login user'
     become: yes
-    shell: "newgrp docker"
+    meta: reset_connection
 
   - name: Set hostname of the machine
     become: yes
-    shell: "echo '{{ new_hostname }}' > '/etc/hostname'"
+    copy:
+      dest: /etc/hostname
+      content: "{{ new_hostname }}"
 
   #  TEST IF DIR EXSISTS, IF NOT > CREATE IT
   - name: Create dirs
