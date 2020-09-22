@@ -44,6 +44,7 @@
     - {role: emacs, tags: 'emacs'}
     - {role: workspaces, tags: 'work'}
     - {role: keybase, tags: 'gpg'}
+    - {role: docker-credential-pass, tags: 'docker-credential-pass'}
 
   tasks:
   - name: Ensure group "docker" exists
