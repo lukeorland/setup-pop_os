@@ -6,7 +6,7 @@
     local_user: "{{ ansible_user_id }}"
     local_home: "{{ lookup('env','HOME') }}"
     region_loc: "nl_NL.UTF-8"
-    new_hostname: devxps
+    new_hostname: popcomplingux0
     # gist_file: '{{ playbook_dir.split("/")[0:-1]|join("/") }}/18dafb104e93c9a2362ffe85c0dfd02e/dconf-settings.dconf'
     users:
       - luke
