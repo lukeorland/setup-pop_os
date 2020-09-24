@@ -29,12 +29,12 @@
 
   roles:
 
-      #- {role: powerlinefonts, tags: 'font'}
+    # {role: powerlinefonts, tags: 'font'}
     - {role: apt_packages, tags: 'apt'}
     - {role: gui_apps, tags: 'app'}
     - {role: markosamuli.pyenv}
-    # - {role: dropbox, tags: 'dropbox'}
-    # - {role: cryptomator, tags: 'crp'}
+    # {role: dropbox, tags: 'dropbox'}
+    # {role: cryptomator, tags: 'crp'}
     - {role: jaredhocutt.gnome_extensions, tags: 'gext'}
     - {role: fira_code}
     - {role: alacritty_config, tags: 'alacritty'}
@@ -72,7 +72,7 @@
       dest: /etc/hostname
       content: "{{ new_hostname }}"
 
-  #  TEST IF DIR EXSISTS, IF NOT > CREATE IT
+  # TEST IF DIR EXSISTS, IF NOT > CREATE IT
   - name: Create dirs
     file:
       path: "{{ item }}"
