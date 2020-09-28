@@ -10,6 +10,7 @@
     method: user
   loop:
     - { name: 'Calibre', url: com.calibre_ebook.calibre }
+    - { name: 'Cheese', url: org.gnome.Cheese }
     - { name: 'DBeaver', url: 'https://flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref' }
     # - { name: 'Flowblade', url: 'https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref' }
     - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop }
