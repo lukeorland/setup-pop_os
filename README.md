@@ -23,13 +23,7 @@ or any of defined roles in: ./ansible/playbook.yml
 - [x] Create a howto
 - [x] Set correct pathing, after clone (in the bash scripts)
 - [x] Add the ansible-galaxy role installation
-- [ ] install appimaged
-```
-https://github.com/probonopd/go-appimage/releases/tag/continuous
-Download https://github.com/probonopd/go-appimage/releases/download/continuous/appimaged-???-x86_64.AppImage
-chmod a+x ~/Downloads/appimaged-???-x86_64.AppImage
-~/Downloads/appimaged-???-x86_64.AppImage
-```
+- [ ] [Install appimaged](https://github.com/AppImage/appimaged#install)
 - [ ] ...
 
 ## NOTE
