@@ -48,7 +48,6 @@
   snap:
     name:
       - docker
-      - yakyak
       # - p3x-redis-ui
       # - yubioath-desktop
       # - chromium
@@ -63,6 +62,7 @@
       - auto-cpufreq
       - codium
       - slack
+      - yakyak
     state: absent
 
 ########
