@@ -25,6 +25,7 @@
       # 1160  # Dash2Panel
       - 1162  # emoji-selector, <Super><Shift>2
       # 1251  # blyr
+      - 1317  # alt-tab-switcher-popup-delay-removal
       # 2660  # transparent panel
 
   roles:
