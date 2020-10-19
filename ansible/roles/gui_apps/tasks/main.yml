@@ -14,6 +14,7 @@
     - { name: 'DBeaver', url: 'https://flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref' }
     # - { name: 'Flowblade', url: 'https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref' }
     - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop }
+    - { name: Postman, url: com.getpostman.Postman }
     - { name: 'PulseAudio Volume Control', url: org.pulseaudio.pavucontrol }
     # - { name: 'Remmina', url: 'https://flathub.org/repo/appstream/org.remmina.Remmina.flatpakref' }
     - { name: 'Shortwave', url: de.haeckerfelix.Shortwave }
