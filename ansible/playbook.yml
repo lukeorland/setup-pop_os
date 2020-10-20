@@ -130,3 +130,22 @@
   #     job: "{{ item.job }}"
   #   loop:
   #     - { name: "dump dconf", time: "weekly", job: "/usr/bin/dconf dump / > {{ gist_file }}" }
+
+
+  - name: xorg.conf.d directory
+    become: yes
+    file:
+      name: /etc/X11/xorg.conf.d
+      state: directory
+
+  - name: left and right mouse buttons together middle click
+    become: yes
+    copy:
+      dest: /etc/X11/xorg.conf.d/20-3rdbutton.conf
+      content: >
+        Section "InputClass"
+          Identifier "middle button"
+          MatchIsPointer "on"
+          MatchDriver "libinput"
+          Option "MiddleEmulation" "on"
+        EndSection
