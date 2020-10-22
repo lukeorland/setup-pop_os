@@ -9,6 +9,7 @@
     state: present
     method: user
   loop:
+    - { name: Anki, url: net.ankiweb.Anki }
     - { name: 'Calibre', url: com.calibre_ebook.calibre }
     - { name: 'Cheese', url: org.gnome.Cheese }
     - { name: 'DBeaver', url: 'https://flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref' }
