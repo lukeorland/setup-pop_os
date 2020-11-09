@@ -5,7 +5,7 @@
   vars:
     local_user: "{{ ansible_user_id }}"
     local_home: "{{ lookup('env','HOME') }}"
-    region_loc: "nl_NL.UTF-8"
+    region_loc: "en_US.UTF-8"
     new_hostname: popcomplingux0
     # gist_file: '{{ playbook_dir.split("/")[0:-1]|join("/") }}/18dafb104e93c9a2362ffe85c0dfd02e/dconf-settings.dconf'
     users:
@@ -13,14 +13,14 @@
       - personal
     gnome_extension_ids:
       - 28    # gTile, <Super><Alt>Enter
-      - 351	  # Icon Hider
+      - 351   # Icon Hider
       - 131   # touchpad-indicator
-      - 277	  # impatience
+      - 277   # impatience
       - 302   # windowoverlay-icons
       - 517   # caffeine
       - 779   # clipboard indicator
       - 800   # remove dropdown arrows
-      - 906	  # sound input and output device chooser
+      - 906   # sound input and output device chooser
       - 1113  # nothing-to-say  :( causes Google Meet problems
       # 1160  # Dash2Panel
       - 1162  # emoji-selector, <Super><Shift>2
