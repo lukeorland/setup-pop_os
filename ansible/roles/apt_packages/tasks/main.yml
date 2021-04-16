@@ -17,6 +17,7 @@
       - meld
       - neovim
       - pidgin  # See also: https://github.com/EionRobb/purple-hangouts
+      - playerctl
       - tmux
       - tree
       - alacritty
