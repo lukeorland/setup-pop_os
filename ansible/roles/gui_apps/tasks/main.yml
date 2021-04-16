@@ -9,19 +9,24 @@
     state: present
     method: user
   loop:
-    - { name: Anki, url: net.ankiweb.Anki }
+    - { name: 'Anki', url: net.ankiweb.Anki }
     - { name: 'Calibre', url: com.calibre_ebook.calibre }
     - { name: 'Cheese', url: org.gnome.Cheese }
     - { name: 'DBeaver', url: 'https://flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref' }
-    # - { name: 'Flowblade', url: 'https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref' }
     - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop }
-    - { name: Postman, url: com.getpostman.Postman }
+    - { name: 'Bandcamp • Nuvola Player', url: eu.tiliado.Nuvola }
+    - { name: 'Mixcloud • Nuvola Player', url: eu.tiliado.NuvolaAppSpotify }
+    - { name: 'NPR One • Nuvola Player', url: eu.tiliado.NuvolaAppMixcloud }
+    - { name: 'Nuvola Player Service', url: eu.tiliado.NuvolaAppNprOne }
+    - { name: 'Pocket Casts • Nuvola Player', url: eu.tiliado.NuvolaAppPocketCasts }
+    - { name: 'SoundCloud • Nuvola Player', url: eu.tiliado.NuvolaAppSoundcloud }
+    - { name: 'Spotify • Nuvola Player', url: eu.tiliado.NuvolaAppSpotify }
+    - { name: 'TuneIn • Nuvola Player', url: eu.tiliado.NuvolaAppTunein }
+    - { name: 'YouTube Music • Nuvola Player', url: eu.tiliado.NuvolaAppYoutubeMusic }
+    - { name: 'Postman', url: com.getpostman.Postman }
     - { name: 'PulseAudio Volume Control', url: org.pulseaudio.pavucontrol }
-    # - { name: 'Remmina', url: 'https://flathub.org/repo/appstream/org.remmina.Remmina.flatpakref' }
     - { name: 'Shortwave', url: de.haeckerfelix.Shortwave }
     - { name: 'Slack', url: 'https://flathub.org/repo/appstream/com.slack.Slack.flatpakref' }
-    - { name: 'Spotify', url: 'https://flathub.org/repo/appstream/com.spotify.Client.flatpakref' }
-    # - { name: 'Teams', url: 'https://flathub.org/repo/appstream/com.microsoft.Teams.flatpakref' }
     - { name: 'Zeal', url: org.zealdocs.Zeal }
     - { name: 'Zoom', url: us.zoom.Zoom }
 
@@ -31,9 +36,13 @@
     state: absent
     method: user
   loop:
-    - { name: 'Visual Studio Code - OSS', url: 'https://flathub.org/repo/appstream/com.visualstudio.code.oss.flatpakref' }
+    - { name: 'Flowblade', url: 'https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref' }
     - { name: 'Lollypop', url: org.gnome.Lollypop }
     - { name: 'Pidgin', url: im.pidgin.Pidgin }
+    - { name: 'Remmina', url: 'https://flathub.org/repo/appstream/org.remmina.Remmina.flatpakref' }
+    - { name: 'Spotify', url: 'https://flathub.org/repo/appstream/com.spotify.Client.flatpakref' }
+    - { name: 'Teams', url: 'https://flathub.org/repo/appstream/com.microsoft.Teams.flatpakref' }
+    - { name: 'Visual Studio Code - OSS', url: 'https://flathub.org/repo/appstream/com.visualstudio.code.oss.flatpakref' }
 
 - name: add several snap items with --classic tag
   become: yes
