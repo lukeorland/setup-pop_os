@@ -16,7 +16,6 @@
       - thefuck
       - meld
       - neovim
-      - pidgin  # See also: https://github.com/EionRobb/purple-hangouts
       - playerctl
       - tmux
       - tree
@@ -64,6 +63,7 @@
       - midori
       - fonts-powerline
       - kazam
+      - pidgin  # See also: https://github.com/EionRobb/purple-hangouts
       - slack
       - xl2tpd
     state: absent
