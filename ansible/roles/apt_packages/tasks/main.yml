@@ -5,46 +5,46 @@
   apt:
     pkg:
       - alacarte
-      - snapd
+      - alacritty
+      - appmenu-gtk3-module
       - bat
       - byobu
       - feedreader
       - fzf
       - gnome-shell-pomodoro  # https://community.spotify.com/t5/Desktop-Linux/Basic-controls-via-command-line/td-p/4295625
+      - gnome-tweaks
       - graphviz
       - htop
-      - thefuck
       - meld
       - neovim
-      - playerctl
-      - tmux
-      - tree
-      - alacritty
-      - zsh
-      - appmenu-gtk3-module
-      - gnome-tweaks
-      - tlp
       # - network-manager-l2tp
       # - network-manager-l2tp-gnome
+      - playerctl
       - silversearcher-ag
+      - snapd
+      - thefuck
+      - tlp
+      - tmux
+      - tree
+      - zsh
       # For pyenv:
       - build-essential
-      - libssl-dev
-      - zlib1g-dev
-      - libbz2-dev
-      - libreadline-dev
-      - libsqlite3-dev
-      - wget
       - curl
-      - llvm
-      - libncurses5-dev
-      - libncursesw5-dev
-      - xz-utils
-      - tk-dev
+      - git
+      - libbz2-dev
       - libffi-dev
       - liblzma-dev
+      - libncurses5-dev
+      - libncursesw5-dev
+      - libreadline-dev
+      - libsqlite3-dev
+      - libssl-dev
+      - llvm
       - python-openssl
-      - git
+      - tk-dev
+      - wget
+      - xz-utils
+      - zlib1g-dev
 
 - name: Build deps
   become: yes
@@ -59,10 +59,10 @@
     name:
       - code
       - falkon
-      - kdeconnect
-      - midori
       - fonts-powerline
       - kazam
+      - kdeconnect
+      - midori
       - pidgin  # See also: https://github.com/EionRobb/purple-hangouts
       - slack
       - xl2tpd
