@@ -1,0 +1,12 @@
+---
+
+# https://unix.stackexchange.com/a/532839/20732
+
+- name: udev rule to prevent Adesso wireless keyboard from waking the computer from sleep
+  become: yes
+  copy:
+    dest: /etc/udev/rules.d/50-addesso-wireless-keyboard.rules
+
+    content: >
+
+      ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="062a", ATTR{power/wakeup}="disabled"

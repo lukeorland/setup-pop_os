@@ -3,32 +3,40 @@
 # tasks file for /home/kevinjel/fresh_pop/roles/gui_apps
 # TODO: add the names + packages to the vars file
 
+- name: Add the Nuvola flatpak remote to the system installation
+  community.general.flatpak_remote:
+    name: nuvola
+    state: present
+    flatpakrepo_url: https://dl.tiliado.eu/flatpak/nuvola.flatpakrepo
+    method: user
+
 - name: add several flatpak items
   flatpak:
     name: "{{ item.url }}"
+    remote: "{{ item.remote }}"
     state: present
     method: user
   loop:
-    - { name: 'Anki', url: net.ankiweb.Anki }
-    - { name: 'Calibre', url: com.calibre_ebook.calibre }
-    - { name: 'Cheese', url: org.gnome.Cheese }
-    - { name: 'DBeaver', url: 'https://flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref' }
-    - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop }
-    - { name: 'Bandcamp • Nuvola Player', url: eu.tiliado.Nuvola }
-    - { name: 'Mixcloud • Nuvola Player', url: eu.tiliado.NuvolaAppSpotify }
-    - { name: 'NPR One • Nuvola Player', url: eu.tiliado.NuvolaAppMixcloud }
-    - { name: 'Nuvola Player Service', url: eu.tiliado.NuvolaAppNprOne }
-    - { name: 'Pocket Casts • Nuvola Player', url: eu.tiliado.NuvolaAppPocketCasts }
-    - { name: 'SoundCloud • Nuvola Player', url: eu.tiliado.NuvolaAppSoundcloud }
-    - { name: 'Spotify • Nuvola Player', url: eu.tiliado.NuvolaAppSpotify }
-    - { name: 'TuneIn • Nuvola Player', url: eu.tiliado.NuvolaAppTunein }
-    - { name: 'YouTube Music • Nuvola Player', url: eu.tiliado.NuvolaAppYoutubeMusic }
-    - { name: 'Postman', url: com.getpostman.Postman }
-    - { name: 'PulseAudio Volume Control', url: org.pulseaudio.pavucontrol }
-    - { name: 'Shortwave', url: de.haeckerfelix.Shortwave }
-    - { name: 'Slack', url: 'https://flathub.org/repo/appstream/com.slack.Slack.flatpakref' }
-    - { name: 'Zeal', url: org.zealdocs.Zeal }
-    - { name: 'Zoom', url: us.zoom.Zoom }
+    - { name: 'Anki', url: net.ankiweb.Anki, remote: flathub }
+    - { name: 'Calibre', url: com.calibre_ebook.calibre, remote: flathub }
+    - { name: 'Cheese', url: org.gnome.Cheese, remote: flathub }
+    - { name: 'DBeaver', url: 'https://flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref', remote: flathub }
+    - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop, remote: flathub }
+    - { name: 'Bandcamp • Nuvola Player', url: eu.tiliado.Nuvola, remote: nuvola }
+    - { name: 'Mixcloud • Nuvola Player', url: eu.tiliado.NuvolaAppSpotify, remote: nuvola }
+    - { name: 'NPR One • Nuvola Player', url: eu.tiliado.NuvolaAppMixcloud, remote: nuvola }
+    - { name: 'Nuvola Player Service', url: eu.tiliado.NuvolaAppNprOne, remote: nuvola }
+    - { name: 'Pocket Casts • Nuvola Player', url: eu.tiliado.NuvolaAppPocketCasts, remote: nuvola }
+    - { name: 'SoundCloud • Nuvola Player', url: eu.tiliado.NuvolaAppSoundcloud, remote: nuvola }
+    - { name: 'Spotify • Nuvola Player', url: eu.tiliado.NuvolaAppSpotify, remote: nuvola }
+    - { name: 'TuneIn • Nuvola Player', url: eu.tiliado.NuvolaAppTunein, remote: nuvola }
+    - { name: 'YouTube Music • Nuvola Player', url: eu.tiliado.NuvolaAppYoutubeMusic, remote: nuvola }
+    - { name: 'Postman', url: com.getpostman.Postman, remote: flathub }
+    - { name: 'PulseAudio Volume Control', url: org.pulseaudio.pavucontrol, remote: flathub }
+    - { name: 'Shortwave', url: de.haeckerfelix.Shortwave, remote: flathub }
+    - { name: 'Slack', url: 'https://flathub.org/repo/appstream/com.slack.Slack.flatpakref', remote: flathub }
+    - { name: 'Zeal', url: org.zealdocs.Zeal, remote: flathub }
+    - { name: 'Zoom', url: us.zoom.Zoom, remote: flathub }
 
 - name: remove several flatpak items
   flatpak:
