@@ -28,7 +28,7 @@
     - { name: 'Nuvola Player Service', url: eu.tiliado.NuvolaAppNprOne, remote: nuvola }
     - { name: 'Pocket Casts • Nuvola Player', url: eu.tiliado.NuvolaAppPocketCasts, remote: nuvola }
     - { name: 'SoundCloud • Nuvola Player', url: eu.tiliado.NuvolaAppSoundcloud, remote: nuvola }
-    - { name: 'Spotify • Nuvola Player', url: eu.tiliado.NuvolaAppSpotify, remote: nuvola }
+    - { name: 'Spotify', url: 'https://flathub.org/repo/appstream/com.spotify.Client.flatpakref', remote: flathub }
     - { name: 'TuneIn • Nuvola Player', url: eu.tiliado.NuvolaAppTunein, remote: nuvola }
     - { name: 'YouTube Music • Nuvola Player', url: eu.tiliado.NuvolaAppYoutubeMusic, remote: nuvola }
     - { name: 'Postman', url: com.getpostman.Postman, remote: flathub }
@@ -48,7 +48,7 @@
     - { name: 'Lollypop', url: org.gnome.Lollypop }
     - { name: 'Pidgin', url: im.pidgin.Pidgin }
     - { name: 'Remmina', url: 'https://flathub.org/repo/appstream/org.remmina.Remmina.flatpakref' }
-    - { name: 'Spotify', url: 'https://flathub.org/repo/appstream/com.spotify.Client.flatpakref' }
+    - { name: 'Spotify • Nuvola Player', url: eu.tiliado.NuvolaAppSpotify, remote: nuvola }
     - { name: 'Teams', url: 'https://flathub.org/repo/appstream/com.microsoft.Teams.flatpakref' }
     - { name: 'Visual Studio Code - OSS', url: 'https://flathub.org/repo/appstream/com.visualstudio.code.oss.flatpakref' }
 
