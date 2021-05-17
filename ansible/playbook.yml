@@ -28,6 +28,7 @@
       - 1317  # alt-tab-switcher-popup-delay-removal
       # 2660  # transparent panel
 
+
   roles:
 
     # {role: powerlinefonts, tags: 'font'}
@@ -47,6 +48,7 @@
     - {role: workspaces, tags: 'work'}
     - {role: keybase, tags: 'gpg'}
     - {role: andrewrothstein.anaconda, tags: python}
+    - {role: local_scripts, tags: 'zsh'}
 
   tasks:
   - name: Ensure group "docker" exists
