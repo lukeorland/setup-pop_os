@@ -1,5 +1,10 @@
 ---
 
+- name: Add nginx stable repository from PPA and install its signing key on Ubuntu target
+  become: yes
+  ansible.builtin.apt_repository:
+    repo: ppa:oibaf/graphics-drivers
+
 - name: Install apt packages
   become: yes
   apt:
@@ -45,6 +50,7 @@
       - wget
       - xz-utils
       - zlib1g-dev
+      - xserver-xorg-video-intel
 
 - name: Build deps
   become: yes
