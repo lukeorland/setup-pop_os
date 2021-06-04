@@ -11,6 +11,15 @@
     users:
       - luke
       - personal
+    docker_edition: 'ce'
+    docker_package: "docker-{{ docker_edition }}"
+    docker_package_state: present
+    docker_repo_url: https://download.docker.com/linux
+    docker_apt_release_channel: stable
+    docker_apt_arch: amd64
+    docker_apt_repository: "deb [arch={{ docker_apt_arch }}] {{ docker_repo_url }}/ubuntu {{ ansible_distribution_release }} {{ docker_apt_release_channel }}"
+    docker_apt_ignore_key_error: False
+    docker_apt_gpg_key: https://download.docker.com/linux/ubuntu/gpg
     gnome_extension_ids:
       - 28    # gTile, <Super><Alt>Enter
       - 351   # Icon Hider
@@ -33,6 +42,7 @@
 
     # {role: powerlinefonts, tags: 'font'}
     - {role: apt_packages, tags: 'apt'}
+    - {role: geerlingguy.docker, become: yes, tags: 'docker'}
     - {role: gui_apps, tags: 'app'}
     - {role: markosamuli.pyenv}
     # {role: dropbox, tags: 'dropbox'}

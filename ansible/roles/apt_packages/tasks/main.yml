@@ -51,10 +51,6 @@
       - xz-utils
       - zlib1g-dev
       - xserver-xorg-video-intel
-      # Docker:
-      - docker-ce
-      - docker-ce-cli
-      - containerd.io
 
 - name: Build deps
   become: yes

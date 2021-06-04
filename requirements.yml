@@ -2,3 +2,4 @@
 - src: markosamuli.pyenv
 - src: jaredhocutt.gnome_extensions
 - src: andrewrothstein.anaconda
+- src: geerlingguy.docker
