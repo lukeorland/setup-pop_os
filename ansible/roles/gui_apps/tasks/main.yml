@@ -67,12 +67,7 @@
   snap:
     name:
       - docker
-      # - p3x-redis-ui
-      # - yubioath-desktop
-      # - chromium
-      # - vlc
-      # - pdfmixtool
-      # - okular
+      - vlc
 
 - name: remove a snap package
   become: yes
@@ -82,6 +77,11 @@
       - codium
       - slack
       - yakyak
+      - yubioath-desktop
+      - p3x-redis-ui
+      - chromium
+      - pdfmixtool
+      - okular
     state: absent
 
 ########
