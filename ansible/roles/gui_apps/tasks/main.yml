@@ -22,10 +22,10 @@
     - { name: 'Cheese', url: org.gnome.Cheese, remote: flathub }
     - { name: 'DBeaver', url: 'https://flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref', remote: flathub }
     - { name: 'Mendeley', url: com.elsevier.MendeleyDesktop, remote: flathub }
-    - { name: 'Bandcamp • Nuvola Player', url: eu.tiliado.Nuvola, remote: nuvola }
-    - { name: 'Mixcloud • Nuvola Player', url: eu.tiliado.NuvolaAppSpotify, remote: nuvola }
-    - { name: 'NPR One • Nuvola Player', url: eu.tiliado.NuvolaAppMixcloud, remote: nuvola }
-    - { name: 'Nuvola Player Service', url: eu.tiliado.NuvolaAppNprOne, remote: nuvola }
+    - { name: 'Bandcamp • Nuvola Player', url: eu.tiliado.NuvolaAppBandcamp, remote: nuvola }
+    - { name: 'Mixcloud • Nuvola Player', url: eu.tiliado.NuvolaAppMixcloud, remote: nuvola }
+    - { name: 'NPR One • Nuvola Player', url: eu.tiliado.NuvolaAppNprOne, remote: nuvola }
+    - { name: 'Nuvola Player Service', url: eu.tiliado.Nuvola, remote: nuvola }
     - { name: 'Pocket Casts • Nuvola Player', url: eu.tiliado.NuvolaAppPocketCasts, remote: nuvola }
     - { name: 'SoundCloud • Nuvola Player', url: eu.tiliado.NuvolaAppSoundcloud, remote: nuvola }
     - { name: 'Spotify', url: 'https://flathub.org/repo/appstream/com.spotify.Client.flatpakref', remote: flathub }
