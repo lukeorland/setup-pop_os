@@ -20,6 +20,20 @@ $ make run_role tag=apt
 or any of defined roles in: ./ansible/playbook.yml
 
 ## TODO
+- [ ] [Enable Wayland](https://linuxconfig.org/how-to-enable-disable-wayland-on-ubuntu-20-04-desktop)
+    This fixes bug where disconnecting external monitors makes computer freeze
+    ```
+    sudoedit /etc/pop-os/gdm3/custom.conf
+    ```
+
+    Comment out the line `WaylandEnable=false`
+    ```
+    sudo systemctl restart gdm3
+    ```
+- [ ] Get left and right mouse together to produce a middle click. This works:
+   ```
+   gsettings set org.gnome.desktop.peripherals.mouse middle-click-emulation true
+   ```
 - [x] Create a howto
 - [x] Set correct pathing, after clone (in the bash scripts)
 - [x] Add the ansible-galaxy role installation
