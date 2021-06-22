@@ -5,7 +5,7 @@
 ## HOW TO USE
 Clone the repo, cd into the dir, run the makefile
 ```
-$ git clone https://github.com/kevinjelnl/setup-pop_os.git 
+$ git clone https://github.com/kevinjelnl/setup-pop_os.git
 $ cd ./setup-pop_os
 $ make setup_machine
 ```
